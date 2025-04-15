@@ -30,15 +30,9 @@ Welcome to the Web Smart Farm Platform repository. This project demonstrates a m
 Below are some example screenshots of the application:
 
 ### Dashboard
-![Dashboard](pics/dashboard.png)
+![Dashboard](pics/dashboard1.png)
+![Dashboard](pics/dashboard2.png)
 
-### Analytics
-![Analytics](pics/analytics.png)
-
-### Settings
-![Settings](pics/settings.png)
-
-> **Note:** Ensure that all images referenced in the README actually exist in the `pics` folder.
 
 ## Contributing
 
