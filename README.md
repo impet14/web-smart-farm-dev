@@ -9,6 +9,9 @@ Welcome to the Web Smart Farm Platform repository. This project demonstrates a m
 - Greenhouse data visualization
 - Modular design with easy integrations
 
+## DEMO
+[DEMO web](https://smartfarm-demo.netlify.app/)
+
 ## Installation
 
 1. Clone the repository:

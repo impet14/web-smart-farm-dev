@@ -1,4 +1,4 @@
-Canvas <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,14 +32,13 @@ Canvas <!DOCTYPE html>
             padding-bottom: 80px;
         }
         
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 1rem;
+        header.main-header {
+            background: linear-gradient(135deg, #2e7d32, #60ad5e);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .header-content {
@@ -55,12 +54,18 @@ Canvas <!DOCTYPE html>
             align-items: center;
             gap: 10px;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            color: #fff;
         }
         
         .logo svg {
-            height: 24px;
-            width: 24px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .current-date span {
+            font-size: 1rem;
+            color: #fff;
         }
         
         main {
@@ -733,20 +738,30 @@ Canvas <!DOCTYPE html>
     </style>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <div class="header-content">
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-                    <path d="M12,3C16.97,3 21,7.03 21,12C21,13.5 20.6,14.9 19.92,16.1L14.83,13.37C14.94,12.93 15,12.47 15,12C15,9.79 13.21,8 11,8C10.53,8 10.07,8.06 9.63,8.17L6.9,3.08C8.1,2.4 9.5,2 11,2C11.34,2 11.67,2.03 12,2.05V3M2.05,13C2.03,12.67 2,12.34 2,12C2,7.03 6.03,3 11,3V4C7.13,4 4,7.13 4,11C4,11.34 4.03,11.67 4.05,12H2.05M15,7L14,6.12C16.17,7.92 17.5,10.73 17.5,13.87C17.5,14.5 17.43,15.11 17.3,15.69L15.94,15.07C16,14.68 16,14.28 16,13.87C16,11.3 14.93,8.93 13.13,7.38L15,5.5V7M9,17L10,17.88C7.83,16.08 6.5,13.27 6.5,10.13C6.5,9.5 6.57,8.89 6.7,8.31L8.06,8.93C8,9.33 8,9.72 8,10.13C8,12.7 9.07,15.07 10.87,16.63L9,18.5V17M15.07,11.25L19.08,16.43C18.38,17.18 17.54,17.81 16.6,18.26L14.25,12.93L15.07,11.25M11.14,15.94L13.17,20.16C12.46,20.35 11.73,20.47 11,20.5C10.26,20.47 9.53,20.35 8.83,20.16L10.86,15.94C10.91,15.95 10.95,15.96 11,15.96C11.05,15.96 11.09,15.95 11.14,15.94M8.75,12.93L6.4,18.25C5.46,17.8 4.62,17.18 3.92,16.43L7.93,11.25L8.75,12.93Z" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                    <defs>
+                        <linearGradient id="leaf-gradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#2e7d32" />
+                            <stop offset="100%" stop-color="#60ad5e" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Leaf shape -->
+                    <path fill="url(#leaf-gradient)" d="M32 4 C20 4, 8 16, 8 28 C8 40, 20 52, 32 52 C44 52, 56 40, 56 28 C56 16, 44 4, 32 4 Z"/>
+                    <!-- AI/circuit details -->
+                    <line x1="32" y1="20" x2="32" y2="44" stroke="#fff" stroke-width="2"/>
+                    <line x1="20" y1="32" x2="44" y2="32" stroke="#fff" stroke-width="2"/>
+                    <circle cx="32" cy="32" r="3" fill="#fff"/>
                 </svg>
                 <span>Smart Greenhouse Management</span>
             </div>
-            <div>
+            <div class="current-date">
                 <span>March 27, 2025</span>
             </div>
         </div>
     </header>
-    
     <main>
         <div class="greenhouse-selector">
             <div class="greenhouse-card active">
