@@ -58,9 +58,11 @@
             color: #fff;
         }
         
-        .logo svg {
+        .logo img {
             width: 40px;
             height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
         }
         
         .current-date span {
@@ -741,20 +743,7 @@
     <header class="main-header">
         <div class="header-content">
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                    <defs>
-                        <linearGradient id="leaf-gradient" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#2e7d32" />
-                            <stop offset="100%" stop-color="#60ad5e" />
-                        </linearGradient>
-                    </defs>
-                    <!-- Leaf shape -->
-                    <path fill="url(#leaf-gradient)" d="M32 4 C20 4, 8 16, 8 28 C8 40, 20 52, 32 52 C44 52, 56 40, 56 28 C56 16, 44 4, 32 4 Z"/>
-                    <!-- AI/circuit details -->
-                    <line x1="32" y1="20" x2="32" y2="44" stroke="#fff" stroke-width="2"/>
-                    <line x1="20" y1="32" x2="44" y2="32" stroke="#fff" stroke-width="2"/>
-                    <circle cx="32" cy="32" r="3" fill="#fff"/>
-                </svg>
+                <img src="logo.jpg" alt="Smart Greenhouse Logo" style="width:80px; height:80px; border-radius:50%; margin-right:20px;">
                 <span>Smart Greenhouse Management</span>
             </div>
             <div class="current-date">
@@ -1972,9 +1961,9 @@
                 ctx.fillStyle = '#757575';
                 ctx.textAlign = 'right';
                 ctx.fillText('30°C', 35, 30);
-                ctx.fillText('25°C', 35, height/3);
-                ctx.fillText('20°C', 35, 2*height/3);
-                ctx.fillText('15°C', 35, height - 45);
+                ctx.fillText('25°C', height/3, height/3);
+                ctx.fillText('20°C', 2*height/3, 2*height/3);
+                ctx.fillText('15°C', height - 45, height - 45);
                 
                 // Draw x axis labels
                 ctx.textAlign = 'center';
